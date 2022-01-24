@@ -49,6 +49,7 @@ h6 {
     justify-content: center;
     align-items: center;
     position: fixed;
+    top: 0;
     z-index: 4;
 }
 
@@ -61,6 +62,7 @@ h6 {
     justify-content: space-between;
     align-items: center;
     position: fixed;
+    top: 0;
     z-index: 5;
 }
 
@@ -273,6 +275,7 @@ h6 {
     width: 32px;
     height: 32px;
     margin-right: 11px;
+    border-radius: 50%;
 }
 
 .users-to-follow h2 {
@@ -349,6 +352,7 @@ h6 {
         height: 121px;
         border: 0;
         background: none;
+        margin-top: 54px;
     }
 }
 
@@ -359,15 +363,11 @@ h6 {
 
 .stories-box ion-icon {
     font-size: 30px;
-    color: none;
-    background-color: #FFFFFF;
-    border-radius: 100%;
+    color: #FFFFFF;
     position: absolute;
     right: 8px;
     z-index: 1;
 }
-
-
 
 @media (max-width: 614px) {
     .stories-box ion-icon {
