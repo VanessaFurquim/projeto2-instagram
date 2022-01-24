@@ -367,6 +367,8 @@ h6 {
     z-index: 1;
 }
 
+
+
 @media (max-width: 614px) {
     .stories-box ion-icon {
         display: none;
