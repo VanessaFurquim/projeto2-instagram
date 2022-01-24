@@ -1,0 +1,552 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    background-color: #FAFAFA;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+}
+
+h2 {
+    font-size: 14px;
+    font-weight: 500;
+    color: #262626;
+}
+
+h3 {
+    font-size: 14px;
+    font-weight: 300;
+    color: #8E8E8E;
+}
+
+h4 {
+    font-size: 12px;
+    font-weight: 500;
+    color: #8E8E8E;
+}
+
+
+h5 {
+    font-size: 12px;
+    font-weight: 400;
+    color: #8E8E8E;
+}
+
+h6 {
+    font-size: 12px;
+    font-weight: 400;
+    color: #262626;
+}
+
+.top-bar-background {
+    width: 100%;
+    height: 54px;
+    border-bottom: 1px solid #DBDBDB;
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 4;
+}
+
+/* assumi que a top bar fica sobreposta ao page content */
+.top-bar {
+    width: 935px;
+    height: 50px;
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 5;
+}
+
+@media (max-width: 935px) {
+    .top-bar {
+        width: 100%;
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 614px) {
+    .top-bar {
+        width: 614px;
+        padding: 0 20px;
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.logos {
+    width: 150px;
+    height: 29px;
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+@media (max-width: 614px) {
+    .logos {
+        display: contents;
+    }
+}
+
+.logos img {
+    width: 103px;
+    height: 29px;
+}
+
+@media (max-width: 614px) {
+    .logos img {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.logos ion-icon {
+    font-size: 23px;
+}
+
+@media (max-width: 614px) {
+    .logo-instagram {
+        display: flex;
+        justify-content: flex-start;
+        margin-left: 21px;
+    }
+}
+
+.logo-divider {
+    width: 1px;
+    height: 22px;
+    background-color: #DBDBDB;
+    margin-right: 10px;
+    margin-left: 11.5px;
+}
+
+@media (max-width: 614px) {
+    .logo-divider {
+        display: none;
+    }
+}
+
+.search-bar {
+    width: 218px;
+    height: 28px;
+    margin: 13px 0;
+    border: 1px solid #DBDBDB;
+    border-radius: 3px;
+    background-color: #FAFAFA;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 614px) {
+    .search-bar {
+        display: none;
+    }
+}
+
+.search-bar p {
+    font-size: 12px;
+    font-weight: 400;
+    color: #979797;
+
+}
+
+.search-bar ion-icon {
+    font-size: 13px;
+    color: #979797;
+    margin-right: 5px;
+}
+
+.buttons {
+    width: 150px;
+    height: 17px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media (max-width: 614px) {
+    .buttons {
+        display: contents;
+    }
+    .ion-plane {
+        display: flex;
+        justify-content: flex-end;
+    }
+    .ion-compass {
+        display: none;
+    }
+    .ion-heart {
+        display: none;
+    }
+    .ion-person {
+        display: none;
+    }
+}
+
+ /*ion-icon [name="paper-plane-outline"] {
+        display: flex;
+        justify-content: flex-end;
+        margin-right: 21px;
+    }
+    ion-icon [name="compass-outine"] {
+        display: none;
+    }
+    ion-icon [name="heart-outine"] {
+        display: none;
+    }
+    ion-icon [name="person-outine"] {
+        display: none;
+    }*/
+
+/* ícones parecem menores que no Figma */
+.buttons ion-icon {
+    font-size: 23px;
+}
+
+/* assumi que a top bar fica sobreposta ao page content, por isso, subtraí a altura da top bar da distância do topo da página (54 dos 88px são tampados pela top bar) */
+.sidebar {
+    background-color: #FAFAFA;
+    width: 293px;
+    margin-top: 57px;
+    margin-left: 28px;
+    position: absolute;
+    right: 0;
+    top: 57px;
+    z-index: 6;
+}
+
+@media (max-width: 935px) {
+    .sidebar {
+        display: none;
+    }
+}
+
+.user-info {
+    width: 295px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.user-info h2 {
+    margin-bottom: 3px;
+}
+
+.user-info img {
+    width: 56px;
+    height: 56px;
+    margin-right: 17px;
+}
+
+.suggestions {
+    margin-top: 24px;
+    margin-bottom: 17px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.suggestions p {
+    font-size: 12px;
+    font-weight: 500;
+    color:#262626
+}
+
+.users-to-follow {
+    margin-bottom: 16px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+}
+
+.users-to-follow img {
+    width: 32px;
+    height: 32px;
+    margin-right: 11px;
+}
+
+.users-to-follow h2 {
+    margin-bottom: 3px;
+
+}
+
+.users-to-follow p {
+    font-size: 12px;
+    font-weight: 500;
+    color: #139EF2;
+    position: absolute;
+    right: 0;
+
+}
+
+.useful-buttons p {
+    font-size: 11px;
+    font-weight: 400;
+    color: #c7c7c7;
+    margin-top: 33px;
+    margin-bottom: 18px;
+}
+
+.copyright p {
+    font-size: 11px;
+    font-weight: 400;
+    color: #c7c7c7;
+}
+
+/* assumi que a top bar fica sobreposta ao page content, por isso, subtraí a altura da top bar da distância do topo da página (54 dos 230px são tampados pela top bar) */
+.page-content {
+    width: 935px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #FAFAFA;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+}
+
+@media (max-width: 935px) {
+    .page-content {
+        align-items: center;
+    }
+}
+
+@media (max-width: 614px) {
+    .page-content {
+        display: contents;
+        justify-content: center;
+    }
+}
+
+.stories-box {
+    height: 118px;
+    width: 614px;
+    margin-top: 34px;
+    border: 1px solid #DBDBDB;
+    border-radius: 3px;
+    padding-left: 18px;
+    background-color: #FFFFFF;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    margin-top: 88px;
+    position: relative;
+}
+
+@media (max-width: 614px) {
+    .stories-box {
+        width: 100%;
+        height: 121px;
+        border: 0;
+        background: none;
+    }
+}
+
+.stories-box img {
+    width: 56px;
+    height: 56px;
+}
+
+.stories-box ion-icon {
+    font-size: 30px;
+    color: none;
+    background-color: #FFFFFF;
+    border-radius: 100%;
+    position: absolute;
+    right: 8px;
+    z-index: 1;
+}
+
+@media (max-width: 614px) {
+    .stories-box ion-icon {
+        display: none;
+    }
+}
+
+.stories-user {
+    width: 66px;
+    height: 116px;
+    background-image: url("Bonus/stories_background.jpg");
+    background-repeat: no-repeat;
+    background-size: 60px;
+    background-position: 58% 35%;
+    margin-right: 14px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.stories-user img {
+    width: 55px;
+}
+
+.stories-user h6 {
+    margin-top: 5px;
+}
+
+.post-column {
+    width: 614px;
+    height: 1770px;
+    margin-top: 24px;
+    background-color: #FAFAFA;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 24px;
+}
+
+@media (max-width: 614px) {
+    .post-column {
+        width: 100%;
+        margin-top: 0;
+        /*border-top: 1px solid #DBDBDB;*/
+    }
+}
+
+/* por que foto não está centralizada ? */
+.post {
+    height: 749px;
+    width: 614px;
+    margin-bottom: 60px;
+    border: 1px solid #DBDBDB;
+    border-radius: 3px;
+    background-color: #FAFAFA;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 614px) {
+    .post {
+        border: none;
+    }
+}
+
+.post-image {
+    width: 612px;
+    height: 612px;
+}
+
+.post-image img {
+    width: 612px;
+    height: 612px;
+    object-fit: cover;
+}
+
+.post-header {
+    width: 612px;
+    height: 61px;
+    padding-top: 15px;
+    padding-left: 17px;
+    padding-bottom: 13px;
+    padding-right: 18.5px;
+    border-bottom: 1px solid #DBDBDB;
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media (max-width: 614px) {
+    .post-header {
+        border-top: 1px solid #DBDBDB;
+    }
+}
+
+.post-header img {
+    height: 32px;
+}
+
+/* user name está ficando mais longe da foto, mesmo com os 64px da lateral esquerda do header, como no Figma */
+.post-header h2 {
+    margin-right: 440px;
+}
+
+.post-footer {
+    width: 612px;
+    height: 76px;
+    border-top: 1px solid #DBDBDB;
+    background-color: #FFFFFF;
+}
+
+@media (max-width: 614px) {
+    .post-footer {
+        border-bottom: 1px solid #DBDBDB;
+    }
+}
+
+.post-footer img {
+    height: 20px;
+    padding-right: 5px;
+}
+
+/* distância entre borda esquerda e coração parece menor que no Figma */
+.top-line {
+    width: 614px;
+    padding-top: 13px;
+    padding-left: 17.5px;
+    padding-bottom: 13px;
+    background-color: none;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+}
+
+/* ícones parecem menores que no Figma */
+.top-line ion-icon {
+    font-size: 23px;
+    margin-right: 18px;
+}
+
+.top-line ion-icon:nth-child(4) {
+    position: absolute;
+    right: 18px;
+    margin-right: 0;
+}
+
+.bottom-line {
+    width: 614px;
+    padding-left: 17px;
+    padding-bottom: 13px;
+    padding-right: 18.5px;
+    background-color: none;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.bottom-line p {
+    font-size: 14px;
+    color: #000000;
+    margin-right: 3px;
+}
+
+/*.bottom-line p:first-child {
+    font-weight: 300;
+}*/
+
+/* por que a sequência dos filhos está começando pelo último (direito)
+.bottom-line p:nth-child(4) {
+    font-weight: 400;
+}
+
+por que a sequência dos filhos está começando pelo último (direito)
+.bottom-line p:nth-child(2) {
+    font-weight: 400;
+}*/
