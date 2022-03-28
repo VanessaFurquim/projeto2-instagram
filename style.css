@@ -53,7 +53,6 @@ h6 {
     z-index: 4;
 }
 
-/* assumi que a top bar fica sobreposta ao page content */
 .top-bar {
     width: 935px;
     height: 50px;
@@ -66,22 +65,6 @@ h6 {
     z-index: 5;
 }
 
-@media (max-width: 935px) {
-    .top-bar {
-        width: 100%;
-        padding: 0 20px;
-    }
-}
-
-@media (max-width: 614px) {
-    .top-bar {
-        width: 614px;
-        padding: 0 20px;
-        display: flex;
-        justify-content: space-between;
-    }
-}
-
 .logos {
     width: 150px;
     height: 29px;
@@ -92,34 +75,8 @@ h6 {
     flex-shrink: 0;
 }
 
-@media (max-width: 614px) {
-    .logos {
-        display: contents;
-    }
-}
-
-.logos img {
-    width: 103px;
-    height: 29px;
-}
-
-@media (max-width: 614px) {
-    .logos img {
-        display: flex;
-        justify-content: center;
-    }
-}
-
 .logos ion-icon {
     font-size: 23px;
-}
-
-@media (max-width: 614px) {
-    .logo-instagram {
-        display: flex;
-        justify-content: flex-start;
-        margin-left: 21px;
-    }
 }
 
 .logo-divider {
@@ -128,12 +85,6 @@ h6 {
     background-color: #DBDBDB;
     margin-right: 10px;
     margin-left: 11.5px;
-}
-
-@media (max-width: 614px) {
-    .logo-divider {
-        display: none;
-    }
 }
 
 .search-bar {
@@ -146,12 +97,6 @@ h6 {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-@media (max-width: 614px) {
-    .search-bar {
-        display: none;
-    }
 }
 
 .search-bar p {
@@ -173,25 +118,6 @@ h6 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-@media (max-width: 614px) {
-    .buttons {
-        display: contents;
-    }
-    .ion-plane {
-        display: flex;
-        justify-content: flex-end;
-    }
-    .ion-compass {
-        display: none;
-    }
-    .ion-heart {
-        display: none;
-    }
-    .ion-person {
-        display: none;
-    }
 }
 
  /*ion-icon [name="paper-plane-outline"] {
@@ -224,12 +150,6 @@ h6 {
     right: 0;
     top: 57px;
     z-index: 6;
-}
-
-@media (max-width: 935px) {
-    .sidebar {
-        display: none;
-    }
 }
 
 .user-info {
@@ -318,19 +238,6 @@ h6 {
     position: relative;
 }
 
-@media (max-width: 935px) {
-    .page-content {
-        align-items: center;
-    }
-}
-
-@media (max-width: 614px) {
-    .page-content {
-        display: contents;
-        justify-content: center;
-    }
-}
-
 .stories-box {
     height: 118px;
     width: 614px;
@@ -346,16 +253,6 @@ h6 {
     position: relative;
 }
 
-@media (max-width: 614px) {
-    .stories-box {
-        width: 100%;
-        height: 121px;
-        border: 0;
-        background: none;
-        margin-top: 54px;
-    }
-}
-
 .stories-box img {
     width: 56px;
     height: 56px;
@@ -367,12 +264,6 @@ h6 {
     position: absolute;
     right: 8px;
     z-index: 1;
-}
-
-@media (max-width: 614px) {
-    .stories-box ion-icon {
-        display: none;
-    }
 }
 
 .stories-user {
@@ -411,14 +302,6 @@ h6 {
     margin-top: 24px;
 }
 
-@media (max-width: 614px) {
-    .post-column {
-        width: 100%;
-        margin-top: 0;
-        /*border-top: 1px solid #DBDBDB;*/
-    }
-}
-
 /* por que foto não está centralizada ? */
 .post {
     height: 749px;
@@ -431,12 +314,6 @@ h6 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-
-@media (max-width: 614px) {
-    .post {
-        border: none;
-    }
 }
 
 .post-image {
@@ -464,12 +341,6 @@ h6 {
     align-items: center;
 }
 
-@media (max-width: 614px) {
-    .post-header {
-        border-top: 1px solid #DBDBDB;
-    }
-}
-
 .post-header img {
     height: 32px;
 }
@@ -484,12 +355,6 @@ h6 {
     height: 76px;
     border-top: 1px solid #DBDBDB;
     background-color: #FFFFFF;
-}
-
-@media (max-width: 614px) {
-    .post-footer {
-        border-bottom: 1px solid #DBDBDB;
-    }
 }
 
 .post-footer img {
@@ -552,3 +417,138 @@ por que a sequência dos filhos está começando pelo último (direito)
 .bottom-line p:nth-child(2) {
     font-weight: 400;
 }*/
+
+@media (max-width: 935px) {
+    .top-bar {
+        width: 100%;
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 614px) {
+    .top-bar {
+        width: 614px;
+        padding: 0 20px;
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+@media (max-width: 614px) {
+    .logos {
+        display: contents;
+    }
+}
+
+.logos img {
+    width: 103px;
+    height: 29px;
+}
+
+@media (max-width: 614px) {
+    .logos img {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 614px) {
+    .logo-instagram {
+        display: flex;
+        justify-content: flex-start;
+        margin-left: 21px;
+    }
+}
+
+@media (max-width: 614px) {
+    .logo-divider {
+        display: none;
+    }
+}
+
+@media (max-width: 614px) {
+    .search-bar {
+        display: none;
+    }
+}
+
+@media (max-width: 614px) {
+    .buttons {
+        display: contents;
+    }
+    .ion-plane {
+        display: flex;
+        justify-content: flex-end;
+    }
+    .ion-compass {
+        display: none;
+    }
+    .ion-heart {
+        display: none;
+    }
+    .ion-person {
+        display: none;
+    }
+}
+
+@media (max-width: 935px) {
+    .sidebar {
+        display: none;
+    }
+}
+
+@media (max-width: 935px) {
+    .page-content {
+        align-items: center;
+    }
+}
+
+@media (max-width: 614px) {
+    .page-content {
+        display: contents;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 614px) {
+    .stories-box {
+        width: 100%;
+        height: 121px;
+        border: 0;
+        background: none;
+        margin-top: 54px;
+    }
+}
+
+@media (max-width: 614px) {
+    .stories-box ion-icon {
+        display: none;
+    }
+}
+
+@media (max-width: 614px) {
+    .post-column {
+        width: 100%;
+        margin-top: 0;
+        /*border-top: 1px solid #DBDBDB;*/
+    }
+}
+
+@media (max-width: 614px) {
+    .post {
+        border: none;
+    }
+}
+
+@media (max-width: 614px) {
+    .post-header {
+        border-top: 1px solid #DBDBDB;
+    }
+}
+
+@media (max-width: 614px) {
+    .post-footer {
+        border-bottom: 1px solid #DBDBDB;
+    }
+}
+
